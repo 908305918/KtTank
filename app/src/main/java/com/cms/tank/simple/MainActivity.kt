@@ -5,7 +5,7 @@ import com.cms.tank.simple.databinding.ActivityMainBinding
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
-    override fun getViewBinding(): ActivityMainBinding {
+    override fun obtainViewBinding(): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
     }
 

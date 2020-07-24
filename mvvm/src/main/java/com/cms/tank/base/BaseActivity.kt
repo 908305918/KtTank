@@ -7,7 +7,7 @@ import androidx.viewbinding.ViewBinding
 abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     protected val mBinding: VB by lazy {
-        getViewBinding()
+        obtainViewBinding()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,8 +16,7 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
         initViews()
     }
 
-    abstract fun getViewBinding(): VB
+    abstract fun obtainViewBinding(): VB
 
     abstract fun initViews()
-
 }
