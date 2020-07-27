@@ -5,10 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.kongzue.dialog.v3.WaitDialog
 
-abstract class BaseFragment<VB : ViewBinding> : Fragment() {
+abstract class KtBaseFragment<VB : ViewBinding> : Fragment() {
 
     protected var mAttachActivity: Activity? = null
     protected lateinit var mBinding: VB
@@ -33,4 +35,15 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
 
     abstract fun initViews()
+
+
+    protected fun showLoading(msg: String) {
+        if (mAttachActivity is AppCompatActivity) {
+            WaitDialog.show(mAttachActivity as AppCompatActivity, msg)
+        }
+    }
+
+    protected fun dismissLoading() {
+        WaitDialog.dismiss()
+    }
 }

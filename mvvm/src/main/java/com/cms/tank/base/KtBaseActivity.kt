@@ -3,8 +3,9 @@ package com.cms.tank.base
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
+import com.kongzue.dialog.v3.WaitDialog
 
-abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
+abstract class KtBaseActivity<VB : ViewBinding> : AppCompatActivity() {
 
     protected val mBinding: VB by lazy {
         obtainViewBinding()
@@ -19,4 +20,12 @@ abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
     abstract fun obtainViewBinding(): VB
 
     abstract fun initViews()
+
+    protected fun showLoading(msg: String) {
+        WaitDialog.show(this, msg)
+    }
+
+    protected fun dismissLoading() {
+        WaitDialog.dismiss()
+    }
 }

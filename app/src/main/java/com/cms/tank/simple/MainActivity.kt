@@ -1,9 +1,9 @@
 package com.cms.tank.simple
 
-import com.cms.tank.base.BaseActivity
+import com.cms.tank.base.KtBaseActivity
 import com.cms.tank.simple.databinding.ActivityMainBinding
 
-class MainActivity : BaseActivity<ActivityMainBinding>() {
+class MainActivity : KtBaseActivity<ActivityMainBinding>() {
 
     override fun obtainViewBinding(): ActivityMainBinding {
         return ActivityMainBinding.inflate(layoutInflater)
