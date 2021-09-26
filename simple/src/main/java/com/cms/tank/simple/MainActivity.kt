@@ -20,3 +20,9 @@ class MainActivity : KtBaseActivity<ActivityMainBinding>() {
         mBinding.moreTex.setAllTextAndMaxLine(text, 3)
     }
 }
+
+
+
+
+
+
