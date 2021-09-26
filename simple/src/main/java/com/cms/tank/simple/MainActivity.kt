@@ -1,15 +1,6 @@
 package com.cms.tank.simple
 
-import android.graphics.Color
-import android.text.SpannableStringBuilder
-import android.text.Spanned
-import android.text.TextPaint
-import android.text.method.LinkMovementMethod
-import android.text.style.ClickableSpan
-import android.util.Log
-import android.view.View
 import com.cms.tank.base.KtBaseActivity
-import com.cms.tank.extensions.toast
 import com.cms.tank.simple.databinding.ActivityMainBinding
 
 class MainActivity : KtBaseActivity<ActivityMainBinding>() {
