@@ -8,17 +8,9 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnTest"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="测试" />
-
-    <com.cms.tank.view.MoreTextView
-        android:id="@+id/more_tex"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:textColor="#333333"
-        android:textSize="16sp" />
-
 
 </LinearLayout>

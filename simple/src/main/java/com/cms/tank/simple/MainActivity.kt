@@ -1,24 +1,24 @@
 package com.cms.tank.simple
 
+import android.os.Bundle
+import android.util.Log
 import com.cms.tank.base.KtBaseActivity
+import com.cms.tank.property.viewBinding
 import com.cms.tank.simple.databinding.ActivityMainBinding
 
-class MainActivity : KtBaseActivity<ActivityMainBinding>() {
+class MainActivity : KtBaseActivity() {
 
-    override fun obtainViewBinding(): ActivityMainBinding {
-        return ActivityMainBinding.inflate(layoutInflater)
+    private val mBinding by viewBinding(ActivityMainBinding::bind)
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        super.setContentView(R.layout.activity_main)
+        mBinding.btnTest.setOnClickListener {
+            Log.e("TAG", "111111")
+        }
+
     }
 
-    val text = "对北半球而言，新智彗星是继1997年的海尔-波普彗星后最亮的彗星。" +
-            "在整个2020年7月内，彗星都将维持人眼可见亮度。7月上旬以前，" +
-            "在黎明前1至2小时内皆能于东北方低仰角处观测到。至7月中旬，彗星移至西北方向，" +
-            "适合观测的时段转为日落后1至2小时内。7月下旬开始，彗星亮度将快速降低，" +
-            "最迟在8月下旬便会完全退回人眼不可见的亮度。"
-
-    override fun initViews() {
-        mBinding.root.alpha = 0.5f
-        mBinding.moreTex.setAllTextAndMaxLine(text, 3)
-    }
 }
 
 
