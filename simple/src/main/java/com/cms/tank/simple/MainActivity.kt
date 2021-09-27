@@ -14,7 +14,7 @@ class MainActivity : KtBaseActivity() {
         super.onCreate(savedInstanceState)
         super.setContentView(R.layout.activity_main)
         mBinding.btnTest.setOnClickListener {
-            Log.e("TAG", "111111")
+            showLoading("加载中")
         }
 
     }
